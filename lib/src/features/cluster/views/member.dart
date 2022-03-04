@@ -98,9 +98,9 @@ class Members extends ConsumerWidget {
                                 Text('*'),
                                 kTinyHorizontalSpacing,
                                 Text(
-                                                      overflow: TextOverflow.ellipsis,
-
-                                    '${difference.toString()} days to due date'),
+                                  '${difference.toString()} days to due date',
+                                  overflow: TextOverflow.ellipsis,
+                                ),
                                 // Text(data[index].agent.recentLoan.agentLoan.loanDueDate.toString())
                               ],
                             ),
