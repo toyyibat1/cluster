@@ -94,11 +94,13 @@ class Members extends ConsumerWidget {
                               children: [
                                 Text(
                                     '${data[index].agent!.firstName} ${data[index].agent!.lastName}'),
-                                kSmallHorizontalSpacing,
+                                kTinyHorizontalSpacing,
                                 Text('*'),
-                                kSmallHorizontalSpacing,
+                                kTinyHorizontalSpacing,
                                 Text(
-                                    '${difference.toString()} days to due date')
+                                                      overflow: TextOverflow.ellipsis,
+
+                                    '${difference.toString()} days to due date'),
                                 // Text(data[index].agent.recentLoan.agentLoan.loanDueDate.toString())
                               ],
                             ),
