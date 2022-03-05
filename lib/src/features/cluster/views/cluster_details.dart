@@ -1,6 +1,6 @@
 import 'package:cluster/src/core/constants/app_spacing.dart';
 import 'package:cluster/src/core/constants/app_textstyle.dart';
-import 'package:cluster/src/features/providers/cluster_provider.dart';
+import 'package:cluster/src/features/cluster/providers/cluster_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -8,7 +8,7 @@ class ClusterDetails extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final cluster = ref.watch(agentProvider);
-    final clusterd = cluster.value?.data;
+    final clusterd = cluster.value!.data;
 
     return Container(
       margin: EdgeInsets.symmetric(

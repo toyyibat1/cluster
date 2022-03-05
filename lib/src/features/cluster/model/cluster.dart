@@ -54,21 +54,6 @@ class Data {
         inactiveAgents: List<InActiveAgent>.from(
             json["inactive_agents"].map((x) => InActiveAgent.fromJson(x))),
       );
-
-  Map<String, dynamic> toJson() => {
-        "cluster_purse_balance": clusterPurseBalance,
-        "total_interest_earned": totalInterestEarned,
-        "total_owed_by_members": totalOwedByMembers,
-        "overdue_agents": List<dynamic>.from(overdueAgents!.map((x) => x)),
-        "cluster_name": clusterName,
-        "cluster_repayment_rate": clusterRepaymentRate,
-        "cluster_repayment_day": clusterRepaymentDay,
-        "due_agents": List<dynamic>.from(dueAgents!.map((x) => x)),
-        "active_agents":
-            List<dynamic>.from(activeAgents!.map((x) => x.toJson())),
-        "inactive_agents":
-            List<dynamic>.from(inactiveAgents!.map((x) => x.toJson())),
-      };
 }
 
 class ActiveAgent {
@@ -102,17 +87,6 @@ class ActiveAgent {
         createdAt: DateTime.parse(json["created_at"]),
         agent: Agent.fromJson(json["agent"]),
       );
-
-  Map<String, dynamic> toJson() => {
-        "id": id,
-        "user_id": userId,
-        "agent_id": agentId,
-        "cluster_id": clusterId,
-        "status_id": statusId,
-        "accepted_at": acceptedAt!.toIso8601String(),
-        "created_at": createdAt!.toIso8601String(),
-        "agent": agent!.toJson(),
-      };
 }
 
 class InActiveAgent {
@@ -146,17 +120,6 @@ class InActiveAgent {
         createdAt: DateTime.parse(json["created_at"]),
         agent: Agent.fromJson(json["agent"]),
       );
-
-  Map<String, dynamic> toJson() => {
-        "id": id,
-        "user_id": userId,
-        "agent_id": agentId,
-        "cluster_id": clusterId,
-        "status_id": statusId,
-        "accepted_at": acceptedAt!.toIso8601String(),
-        "created_at": createdAt!.toIso8601String(),
-        "agent": agent!.toJson(),
-      };
 }
 
 class Agent {

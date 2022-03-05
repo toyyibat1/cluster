@@ -1,7 +1,6 @@
 import 'package:cluster/src/core/constants/app_spacing.dart';
-import 'package:cluster/src/core/constants/images.dart';
 import 'package:cluster/src/features/cluster/controller/agent_controller.dart';
-import 'package:cluster/src/features/providers/cluster_provider.dart';
+import 'package:cluster/src/features/cluster/providers/cluster_provider.dart';
 import 'package:cluster/src/widgets/empty_list.dart';
 import 'package:cluster/src/widgets/loan.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +59,7 @@ class Members extends ConsumerWidget {
               data: (data) => ListView.builder(
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
-                itemCount: data!.length,
+                itemCount: data.length,
                 itemBuilder: (BuildContext context, int index) {
                   int daysBetween(DateTime from, DateTime to) {
                     from = DateTime(from.year, from.month, from.day);
@@ -132,7 +131,7 @@ class Members extends ConsumerWidget {
               data: (data) => ListView.builder(
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
-                itemCount: data!.length,
+                itemCount: data.length,
                 itemBuilder: (BuildContext context, int index) {
                   // data[index].agent.recentLoan.agentLoan.loanDueDate
                   return Container(
@@ -154,7 +153,7 @@ class Members extends ConsumerWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                                '${data[index].agent!.firstName} ${data[index].agent!.lastName}'),
+                                'N${data[index].agent!.firstName} ${data[index].agent!.lastName}'),
                             kSmallVerticalSpacing,
                             Text('No Active Loan'),
                           ],

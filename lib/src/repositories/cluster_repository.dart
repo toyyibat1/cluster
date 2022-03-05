@@ -13,13 +13,13 @@ class ClusterRepository {
     return response;
   }
 
-  Future<List<ActiveAgent>?> getActiveLoan() async {
+  Future<List<ActiveAgent>> getActiveLoan() async {
     final response = await service.getActiveLoan();
     print(response);
     return response;
   }
 
-  Future<List<InActiveAgent>?> getInActiveLoan() async {
+  Future<List<InActiveAgent>> getInActiveLoan() async {
     final response = await service.getInActiveLoan();
     print(response);
     return response;

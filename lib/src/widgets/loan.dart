@@ -20,7 +20,7 @@ class LoanList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return loan!
+    return loan != null && loan!
         ? EmptyList(text: text!)
         : ListView.builder(
             scrollDirection: Axis.vertical,
