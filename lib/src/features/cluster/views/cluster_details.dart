@@ -14,18 +14,19 @@ class ClusterDetails extends ConsumerWidget {
       margin: EdgeInsets.symmetric(
         horizontal: 16,
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: ListView(
+        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
               Icon(Icons.circle_notifications),
               TextButton(
-                  onPressed: () {},
-                  child: TextValue(
-                    text: 'Cluster purse setting',
-                    kstyle: kMediumText,
-                  )),
+                onPressed: () {},
+                child: TextValue(
+                  text: 'Cluster purse setting',
+                  kstyle: kMediumText,
+                ),
+              ),
             ],
           ),
           TextValue(text: 'Frequency of Contribution'),
@@ -37,11 +38,12 @@ class ClusterDetails extends ConsumerWidget {
                 kstyle: kLabelText,
               ),
               TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Change',
-                    style: kRedText,
-                  )),
+                onPressed: () {},
+                child: Text(
+                  'Change',
+                  style: kRedText,
+                ),
+              ),
             ],
           ),
           TextValue(
@@ -90,11 +92,12 @@ class ClusterDetails extends ConsumerWidget {
             children: [
               Icon(Icons.menu),
               TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Loan setting',
-                    style: kMediumText,
-                  )),
+                onPressed: () {},
+                child: Text(
+                  'Loan setting',
+                  style: kMediumText,
+                ),
+              ),
             ],
           ),
           TextValue(
@@ -107,8 +110,9 @@ class ClusterDetails extends ConsumerWidget {
             children: [
               TextValue(text: 'Repayment Day'),
               TextButton(
-                  onPressed: () {},
-                  child: TextValue(text: 'Change', kstyle: kRedText))
+                onPressed: () {},
+                child: TextValue(text: 'Change', kstyle: kRedText),
+              )
             ],
           ),
           TextValue(text: 'Every ${clusterd?.clusterRepaymentDay.toString()}'),
@@ -131,21 +135,24 @@ class ClusterDetails extends ConsumerWidget {
             children: [
               Icon(Icons.circle_notifications),
               TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Group settings',
-                    style: kMediumText,
-                  )),
+                onPressed: () {},
+                child: Text(
+                  'Group settings',
+                  style: kMediumText,
+                ),
+              ),
             ],
           ),
           TextValue(text: 'Group rules'),
           kSmallVerticalSpacing,
           TextValue(
-              text:
-                  '1. Check the cars rental terms as well, because each company has its own rules.'),
+            text:
+                '1. Check the cars rental terms as well, because each company has its own rules.',
+          ),
           TextValue(
-              text:
-                  '2. Check the cars rental terms as well, because each company has its own rules.'),
+            text:
+                '2. Check the cars rental terms as well, because each company has its own rules.',
+          ),
           kMediumVerticalSpacing,
           TextValue(text: 'Group Whatsapp'),
           TextValue(
@@ -156,11 +163,12 @@ class ClusterDetails extends ConsumerWidget {
             children: [
               Icon(Icons.edit, color: Colors.red[100]),
               TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Edit settings',
-                    style: kRedText,
-                  )),
+                onPressed: () {},
+                child: Text(
+                  'Edit settings',
+                  style: kRedText,
+                ),
+              ),
             ],
           ),
           Divider(),
@@ -190,14 +198,14 @@ class ClusterDetails extends ConsumerWidget {
             children: [
               Icon(Icons.edit, color: Colors.red[100]),
               TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'View earning history',
-                    style: kRedText,
-                  )),
+                onPressed: () {},
+                child: Text(
+                  'View earning history',
+                  style: kRedText,
+                ),
+              ),
             ],
           ),
-          kExtraLargeVerticalSpacing,
         ],
       ),
     );

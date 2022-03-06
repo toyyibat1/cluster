@@ -52,10 +52,7 @@ class Loans extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 16.0),
-          child: Text(text),
-        ),
+        Text(text),
         IconButton(
           onPressed: onPressed,
           icon: showdueLoan ? Icon(Icons.add) : Icon(Icons.remove),
