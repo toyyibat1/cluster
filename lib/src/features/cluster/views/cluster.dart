@@ -30,9 +30,9 @@ class MyCluster extends HookConsumerWidget {
     });
 
     _scrollController.addListener(() {
-      if (fixedScroll == false) {
-        _scrollController.jumpTo(0);
-      }
+      // if (fixedScroll == false) {
+      //   _scrollController.jumpTo(0);
+      // }
       _scrollController.animateTo(
         0,
         duration: Duration(microseconds: 300),
@@ -61,7 +61,8 @@ class MyCluster extends HookConsumerWidget {
                 ),
               )
             : NestedScrollView(
-                controller: _scrollController,
+                physics: ScrollPhysics(),
+                // controller: _scrollController,
                 headerSliverBuilder: (context, value) {
                   return [
                     SliverToBoxAdapter(
